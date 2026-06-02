@@ -1,0 +1,20 @@
+{
+  "name": "peachsoft-drive",
+  "version": "0.1.0",
+  "description": "A mature web product skeleton for an enterprise file storage platform.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "file-storage",
+    "cloud-drive",
+    "web-product",
+    "microservices"
+  ],
+  "license": "UNLICENSED"
+}
