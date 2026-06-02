@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peachsoft Drive</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <div>
+            <strong>Peachsoft Drive</strong>
+            <span>Enterprise file workspace</span>
+          </div>
+        </div>
+        <nav class="nav-list">
+          <button class="nav-item active" data-view="files">文件列表</button>
+          <button class="nav-item" data-view="uploads">上传与传输</button>
+          <button class="nav-item" data-view="preview">文件预览</button>
+          <button class="nav-item" data-view="shares">分享中心</button>
+          <button class="nav-item" data-view="permissions">权限管理</button>
+          <button class="nav-item" data-view="trash">回收站</button>
+          <button class="nav-item" data-view="teams">团队空间</button>
+          <button class="nav-item" data-view="admin">管理后台</button>
+        </nav>
+        <div class="quota-block">
+          <span>总容量使用</span>
+          <strong id="quotaText">--</strong>
+          <div class="meter"><div id="quotaBar"></div></div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">团队文件工作台</p>
+            <h1 id="viewTitle">文件列表</h1>
+          </div>
+          <div class="actions">
+            <label class="search-box">
+              <span>搜索</span>
+              <input id="searchInput" type="search" placeholder="文件名、负责人、标签" />
+            </label>
+            <button id="uploadButton" class="primary-button">上传文件</button>
+          </div>
+        </header>
+
+        <section class="metric-row" aria-label="Workspace metrics">
+          <div><span>活跃文件</span><strong id="metricFiles">--</strong></div>
+          <div><span>共享文件</span><strong id="metricShares">--</strong></div>
+          <div><span>回收站</span><strong id="metricTrash">--</strong></div>
+          <div><span>传输中</span><strong id="metricTransfers">--</strong></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="main-panel">
+            <div class="panel-heading">
+              <h2 id="panelTitle">最近文件</h2>
+              <div id="panelMeta">按更新时间排序</div>
+            </div>
+            <div id="mainContent" class="data-surface"></div>
+          </div>
+          <aside class="inspector">
+            <div class="panel-heading">
+              <h2>上下文</h2>
+              <div id="inspectorMeta">选择文件查看详情</div>
+            </div>
+            <div id="inspectorContent" class="inspector-content"></div>
+          </aside>
+        </section>
+
+        <footer class="transfer-strip" id="transferStrip"></footer>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
